@@ -1,0 +1,77 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@reduxjs/toolkit": "*",
+    "@testing-library/jest-dom": "*",
+    "@testing-library/react": "*",
+    "@testing-library/user-event": "*",
+    "@types/axios": "^0.14.0",
+    "@types/jest": "*",
+    "@types/node": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "@types/swiper": "^6.0.0",
+    "html2canvas": "^1.4.1",
+    "html2pdf.js": "^0.10.1",
+    "jspdf": "^2.5.1",
+    "react": "*",
+    "react-dom": "*",
+    "react-hot-toast": "*",
+    "react-icons": "^5.1.0",
+    "react-redux": "*",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "*",
+    "react-scripts": "*",
+    "react-slick": "^0.30.2",
+    "react-to-print": "^2.15.1",
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "*",
+    "typescript": "*",
+    "web-vitals": "*"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/lodash.debounce": "^4.0.9",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "@types/react-router-dom": "*",
+    "@types/react-slick": "^0.23.13",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "@vitejs/plugin-react": "*",
+    "autoprefixer": "*",
+    "cypress": "*",
+    "eslint": "*",
+    "eslint-plugin-react-hooks": "*",
+    "eslint-plugin-react-refresh": "*",
+    "postcss": "*",
+    "tailwindcss": "*",
+    "typescript": "*",
+    "vite": "*"
+  }
+}
