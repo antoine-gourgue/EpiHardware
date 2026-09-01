@@ -13,7 +13,7 @@
   }
 
   body {
-    @apply bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
+    @apply bg-page text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
 
@@ -47,6 +47,11 @@
   /* Decorative blurred gradient blob for hero / section backgrounds. */
   .blob {
     @apply pointer-events-none absolute rounded-full blur-[120px];
+  }
+
+  /* Amazon-like text link: teal, warm-orange on hover. */
+  .a-link {
+    @apply text-link hover:text-link-hover transition-colors hover:underline dark:text-brand-300;
   }
 
   .link-underline {

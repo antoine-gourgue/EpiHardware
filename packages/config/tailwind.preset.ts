@@ -38,7 +38,14 @@ const preset: Omit<Config, 'content'> = {
           hover: '#f7ca00',
           buy: '#ffa41c',
           'buy-hover': '#fa8900'
-        }
+        },
+        // Amazon-like link (teal) and its warm hover.
+        link: {
+          DEFAULT: '#007185',
+          hover: '#c7511f'
+        },
+        // Light utilitarian page background.
+        page: '#eaeded'
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans],
