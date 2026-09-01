@@ -1,0 +1,30 @@
+{
+  "name": "epihardware",
+  "version": "2.0.0",
+  "private": true,
+  "description": "EpiHardware — modern hardware store, Next.js monorepo",
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,css}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,css}\"",
+    "db:generate": "pnpm --filter @epihardware/db generate",
+    "db:push": "pnpm --filter @epihardware/db push",
+    "db:migrate": "pnpm --filter @epihardware/db migrate",
+    "db:seed": "pnpm --filter @epihardware/db seed",
+    "db:studio": "pnpm --filter @epihardware/db studio"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "turbo": "^2.5.6",
+    "typescript": "^5.7.3"
+  }
+}

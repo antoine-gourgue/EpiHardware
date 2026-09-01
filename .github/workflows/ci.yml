@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_DEMO_MODE: 'true'
+      AUTH_SECRET: 'ci-placeholder-secret-not-used-at-runtime-000'
+    steps:
+      - uses: actions/checkout@v4
+
+      # pnpm version comes from package.json "packageManager".
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Prisma client
+        run: pnpm db:generate
+
+      - name: Prettier
+        run: pnpm format:check
+
+      - name: Lint
+        run: pnpm lint
+
+      # Build before the standalone typecheck so Next.js has generated its
+      # `.next/types` and `next-env.d.ts` for the web app's tsc pass.
+      - name: Build
+        run: pnpm build
+
+      - name: Typecheck
+        run: pnpm typecheck

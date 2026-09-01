@@ -1,0 +1,42 @@
+{
+  "name": "@epihardware/db",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./demo": {
+      "types": "./src/demo-data.ts",
+      "default": "./src/demo-data.ts"
+    }
+  },
+  "scripts": {
+    "build": "prisma generate",
+    "generate": "prisma generate",
+    "push": "prisma db push",
+    "migrate": "prisma migrate dev",
+    "migrate:deploy": "prisma migrate deploy",
+    "seed": "prisma db seed",
+    "studio": "prisma studio",
+    "typecheck": "tsc --noEmit"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.3.0"
+  },
+  "devDependencies": {
+    "@epihardware/config": "workspace:*",
+    "@faker-js/faker": "^9.4.0",
+    "bcryptjs": "^2.4.3",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^22.10.7",
+    "prisma": "^6.3.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
