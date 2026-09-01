@@ -31,7 +31,7 @@ export function ProductImage({
     return (
       <div
         className={cn(
-          'from-brand-500/15 text-brand-500/60 flex items-center justify-center bg-gradient-to-br to-violet-500/15',
+          'from-brand-500/15 text-brand-500/60 flex items-center justify-center bg-gradient-to-br to-amber-400/15',
           className
         )}
       >

@@ -19,7 +19,7 @@ export function CheckoutButton({ isAuthenticated }: { isAuthenticated: boolean }
   }
 
   return (
-    <Button size="lg" className="w-full" onClick={checkout} disabled={pending}>
+    <Button size="lg" variant="cart" className="w-full" onClick={checkout} disabled={pending}>
       {pending ? <Spinner className="h-4 w-4" /> : <Lock className="h-4 w-4" />}
       {isAuthenticated ? 'Valider la commande' : 'Se connecter pour commander'}
     </Button>

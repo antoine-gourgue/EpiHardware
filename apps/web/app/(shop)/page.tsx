@@ -43,7 +43,7 @@ export default async function HomePage() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="blob bg-brand-500/25 left-[-10%] top-[-20%] h-[420px] w-[420px]" />
-        <div className="blob right-[-5%] top-[10%] h-[360px] w-[360px] bg-violet-500/20" />
+        <div className="blob right-[-5%] top-[10%] h-[360px] w-[360px] bg-amber-400/20" />
         <Container className="relative grid grid-cols-1 gap-12 py-16 lg:grid-cols-2 lg:items-center lg:py-24">
           <div className="animate-fade-up">
             <span className="border-brand-200 bg-brand-50 text-brand-700 dark:border-brand-500/30 dark:bg-brand-500/10 dark:text-brand-300 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm font-medium">
@@ -86,7 +86,7 @@ export default async function HomePage() {
 
           {hero && (
             <div className="animate-fade-up relative [animation-delay:120ms]">
-              <div className="from-brand-500/20 absolute inset-0 -z-10 translate-y-6 scale-95 rounded-[2rem] bg-gradient-to-br to-violet-500/20 blur-2xl" />
+              <div className="from-brand-500/20 absolute inset-0 -z-10 translate-y-6 scale-95 rounded-[2rem] bg-gradient-to-br to-amber-400/20 blur-2xl" />
               <div className="shadow-soft-lg rounded-[2rem] border border-slate-200/80 bg-white/80 p-5 backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/80">
                 <div className="relative aspect-square overflow-hidden rounded-2xl bg-white">
                   <ProductImage
@@ -211,7 +211,7 @@ export default async function HomePage() {
       {/* CTA band */}
       <section className="pb-8">
         <Container>
-          <div className="from-brand-600 relative overflow-hidden rounded-[2rem] bg-gradient-to-br to-violet-600 px-8 py-14 text-center sm:px-16 sm:py-20">
+          <div className="from-navy-800 to-navy-950 relative overflow-hidden rounded-2xl bg-gradient-to-br px-8 py-14 text-center sm:px-16 sm:py-20">
             <div className="blob left-[10%] top-[-30%] h-64 w-64 bg-white/20" />
             <div className="blob bg-brand-950/30 bottom-[-40%] right-[10%] h-72 w-72" />
             <div className="relative mx-auto max-w-2xl">

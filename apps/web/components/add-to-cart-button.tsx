@@ -20,6 +20,7 @@ export function AddToCartButton({
   quantity = 1,
   label = 'Ajouter au panier',
   iconOnly = false,
+  variant = 'cart',
   ...buttonProps
 }: Props) {
   const [pending, startTransition] = useTransition()
@@ -34,6 +35,7 @@ export function AddToCartButton({
   return (
     <Button
       type="button"
+      variant={variant}
       onClick={handleClick}
       disabled={pending}
       aria-label={iconOnly ? label : undefined}

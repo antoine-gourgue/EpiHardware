@@ -59,7 +59,7 @@
     text-wrap: balance;
   }
   .text-gradient {
-    @apply from-brand-600 via-brand-500 bg-gradient-to-r to-violet-500 bg-clip-text text-transparent;
+    @apply from-brand-600 via-brand-500 bg-gradient-to-r to-amber-400 bg-clip-text text-transparent;
   }
   .mask-fade-r {
     -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%);

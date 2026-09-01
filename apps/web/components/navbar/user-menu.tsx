@@ -6,7 +6,7 @@ import { useSession, signOut } from 'next-auth/react'
 import { LogOut, Package, Settings, ShieldCheck, User as UserIcon } from 'lucide-react'
 import { Avatar, Button } from '@epihardware/ui'
 
-export function UserMenu() {
+export function UserMenu({ onDark = false }: { onDark?: boolean }) {
   const { data: session, status } = useSession()
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
@@ -26,7 +26,16 @@ export function UserMenu() {
   if (!session?.user) {
     return (
       <div className="flex items-center gap-2">
-        <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
+        <Button
+          asChild
+          variant="ghost"
+          size="sm"
+          className={
+            onDark
+              ? 'hidden text-slate-100 hover:bg-white/10 hover:text-white sm:inline-flex'
+              : 'hidden sm:inline-flex'
+          }
+        >
           <Link href="/login">Connexion</Link>
         </Button>
         <Button asChild size="sm">
@@ -43,10 +52,20 @@ export function UserMenu() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen((o) => !o)}
-        className="inline-flex items-center gap-2 rounded-xl border border-transparent p-0.5 pr-2 transition hover:border-slate-200 hover:bg-slate-50 dark:hover:border-slate-700 dark:hover:bg-slate-800"
+        className={
+          onDark
+            ? 'inline-flex items-center gap-2 rounded-lg border border-transparent p-0.5 pr-2 transition hover:border-white/20 hover:bg-white/10'
+            : 'inline-flex items-center gap-2 rounded-lg border border-transparent p-0.5 pr-2 transition hover:border-slate-200 hover:bg-slate-50 dark:hover:border-slate-700 dark:hover:bg-slate-800'
+        }
       >
         <Avatar name={fullName} />
-        <span className="hidden text-sm font-medium text-slate-700 lg:block dark:text-slate-200">
+        <span
+          className={
+            onDark
+              ? 'hidden text-sm font-medium text-slate-100 lg:block'
+              : 'hidden text-sm font-medium text-slate-700 lg:block dark:text-slate-200'
+          }
+        >
           {user.firstName}
         </span>
       </button>

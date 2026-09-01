@@ -10,7 +10,7 @@ export function LogoMark({ className }: { className?: string }) {
   return (
     <span
       className={cn(
-        'from-brand-500 shadow-soft relative grid place-items-center overflow-hidden rounded-xl bg-gradient-to-br to-violet-500',
+        'from-brand-500 shadow-soft relative grid place-items-center overflow-hidden rounded-xl bg-gradient-to-br to-amber-400',
         className
       )}
     >
@@ -41,7 +41,15 @@ export function LogoMark({ className }: { className?: string }) {
   )
 }
 
-export function Logo({ className, href = '/' }: { className?: string; href?: string }) {
+export function Logo({
+  className,
+  href = '/',
+  onDark = false
+}: {
+  className?: string
+  href?: string
+  onDark?: boolean
+}) {
   return (
     <Link
       href={href}
@@ -49,8 +57,16 @@ export function Logo({ className, href = '/' }: { className?: string; href?: str
       aria-label="EpiHardware — accueil"
     >
       <LogoMark className="h-9 w-9 transition-transform duration-300 group-hover:-rotate-6" />
-      <span className="font-display text-lg font-extrabold tracking-tight text-slate-900 dark:text-white">
-        Epi<span className="text-brand-600 dark:text-brand-400">Hardware</span>
+      <span
+        className={cn(
+          'font-display text-lg font-extrabold tracking-tight',
+          onDark ? 'text-white' : 'text-slate-900 dark:text-white'
+        )}
+      >
+        Epi
+        <span className={onDark ? 'text-brand-400' : 'text-brand-600 dark:text-brand-400'}>
+          Hardware
+        </span>
       </span>
     </Link>
   )

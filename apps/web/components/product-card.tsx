@@ -9,7 +9,7 @@ import { AddToCartButton } from './add-to-cart-button'
 export function ProductCard({ product, priority }: { product: ProductDTO; priority?: boolean }) {
   const outOfStock = product.stock <= 0
   return (
-    <div className="hover:border-brand-200 hover:shadow-soft-lg dark:hover:border-brand-500/40 group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white transition-all duration-300 hover:-translate-y-1 dark:border-slate-800 dark:bg-slate-900">
+    <div className="hover:border-brand-300 hover:shadow-soft-lg dark:hover:border-brand-500/40 group relative flex flex-col overflow-hidden rounded-lg border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-0.5 dark:border-slate-800 dark:bg-slate-900">
       <Link
         href={`/products/${product.slug}`}
         className="relative block aspect-[4/3] overflow-hidden bg-white"

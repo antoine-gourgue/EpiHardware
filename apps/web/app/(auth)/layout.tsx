@@ -12,7 +12,7 @@ const PERKS = [
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="grid min-h-dvh grid-cols-1 lg:grid-cols-2">
-      <div className="from-brand-700 via-brand-600 relative hidden flex-col justify-between overflow-hidden bg-gradient-to-br to-violet-600 p-12 text-white lg:flex">
+      <div className="from-brand-500 via-brand-600 to-brand-700 relative hidden flex-col justify-between overflow-hidden bg-gradient-to-br p-12 text-white lg:flex">
         <div className="blob left-[-10%] top-[-10%] h-80 w-80 bg-white/15" />
         <div className="blob bg-brand-950/30 bottom-[-15%] right-[-5%] h-96 w-96" />
         <div className="relative">

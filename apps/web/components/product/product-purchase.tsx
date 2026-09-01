@@ -64,13 +64,19 @@ export function ProductPurchase({
       </div>
 
       <div className="flex flex-col gap-3 sm:flex-row">
-        <Button size="lg" onClick={() => add()} disabled={disabled || pending} className="flex-1">
+        <Button
+          size="lg"
+          variant="cart"
+          onClick={() => add()}
+          disabled={disabled || pending}
+          className="flex-1"
+        >
           {pending ? <Spinner className="h-4 w-4" /> : <ShoppingCart className="h-4 w-4" />}
           {disabled ? 'Indisponible' : 'Ajouter au panier'}
         </Button>
         <Button
           size="lg"
-          variant="secondary"
+          variant="buy"
           onClick={() => add(() => router.push('/cart'))}
           disabled={disabled || pending}
           className="flex-1"

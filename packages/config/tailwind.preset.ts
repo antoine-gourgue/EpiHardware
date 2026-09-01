@@ -5,8 +5,9 @@ import defaultTheme from 'tailwindcss/defaultTheme'
  * Shared Tailwind preset — the single source of truth for the EpiHardware
  * design language. Consumed by both `apps/web` and `packages/ui`.
  *
- * Brand DNA: a deep indigo scale (`brand`) over slate neutrals, generous
- * rounding, an indigo-tinted soft shadow, and class-based dark mode.
+ * Marketplace DNA: a warm amazon-like orange accent (`brand`) over slate
+ * neutrals, a dark `navy` top bar, a yellow `cart` call-to-action, tight
+ * rounding, neutral soft shadows, and class-based dark mode.
  */
 const preset: Omit<Config, 'content'> = {
   darkMode: 'class',
@@ -14,17 +15,29 @@ const preset: Omit<Config, 'content'> = {
     extend: {
       colors: {
         brand: {
-          50: '#eef1ff',
-          100: '#e0e5ff',
-          200: '#c7ceff',
-          300: '#a5adfc',
-          400: '#828bf8',
-          500: '#6366f1',
-          600: '#4f4ee6',
-          700: '#4341c0',
-          800: '#37368f',
-          900: '#302f72',
-          950: '#1d1c44'
+          50: '#fff8ec',
+          100: '#feecc8',
+          200: '#fdd88d',
+          300: '#fbbd52',
+          400: '#ffa724',
+          500: '#ff9900',
+          600: '#e8850a',
+          700: '#b45f09',
+          800: '#8f4a0f',
+          900: '#743d10',
+          950: '#431e05'
+        },
+        navy: {
+          700: '#232f3e',
+          800: '#1b2531',
+          900: '#131921',
+          950: '#0d1117'
+        },
+        cart: {
+          DEFAULT: '#ffd814',
+          hover: '#f7ca00',
+          buy: '#ffa41c',
+          'buy-hover': '#fa8900'
         }
       },
       fontFamily: {
@@ -33,9 +46,9 @@ const preset: Omit<Config, 'content'> = {
         mono: ['var(--font-mono)', ...defaultTheme.fontFamily.mono]
       },
       boxShadow: {
-        soft: '0 10px 30px -14px rgba(67, 65, 192, 0.28)',
-        'soft-lg': '0 24px 60px -20px rgba(67, 65, 192, 0.35)',
-        glow: '0 0 0 1px rgba(99, 102, 241, 0.12), 0 8px 30px -12px rgba(99, 102, 241, 0.45)'
+        soft: '0 8px 24px -12px rgba(15, 23, 42, 0.18)',
+        'soft-lg': '0 20px 45px -18px rgba(15, 23, 42, 0.25)',
+        glow: '0 0 0 1px rgba(255, 153, 0, 0.14), 0 8px 26px -12px rgba(255, 153, 0, 0.4)'
       },
       screens: {
         xs: '375px',
