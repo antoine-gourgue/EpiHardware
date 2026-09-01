@@ -1,0 +1,7 @@
+{
+  "extends": "@epihardware/config/tsconfig/react-library.json",
+  "compilerOptions": {
+    "types": ["react", "react-dom"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
+}

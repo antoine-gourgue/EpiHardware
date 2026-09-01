@@ -1,0 +1,9 @@
+{
+  "extends": "@epihardware/config/tsconfig/base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "lib": ["ES2022"],
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts", "prisma/**/*.ts"]
+}
