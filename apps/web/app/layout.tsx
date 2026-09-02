@@ -27,7 +27,22 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
-    type: 'website'
+    type: 'website',
+    images: [
+      {
+        url: 'https://epihardware.vercel.app/og.png',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+        alt: 'EpiHardware'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: ['https://epihardware.vercel.app/og.png']
   }
 }
 
